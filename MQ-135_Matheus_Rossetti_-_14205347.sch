@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
+<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.1" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -3986,20 +3986,22 @@ Allows current flow when high potential at base.</description>
 </net>
 <net name="N$12" class="0">
 <segment>
-<pinref part="NUCLEO_STM32" gate="G$1" pin="PA4"/>
-<wire x1="144.44" y1="170.76" x2="138" y2="170.76" width="0.1524" layer="91"/>
-<wire x1="138" y1="170.76" x2="138" y2="215" width="0.1524" layer="91"/>
 <pinref part="J3" gate="G$1" pin="2"/>
+<wire x1="138" y1="177.2" x2="138" y2="215" width="0.1524" layer="91"/>
 <wire x1="205.92" y1="215" x2="138" y2="215" width="0.1524" layer="91"/>
+<pinref part="NUCLEO_STM32" gate="G$1" pin="PA10"/>
+<wire x1="157.14" y1="142.82" x2="157.14" y2="177.2" width="0.1524" layer="91"/>
+<wire x1="157.14" y1="177.2" x2="138" y2="177.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$15" class="0">
 <segment>
-<pinref part="NUCLEO_STM32" gate="G$1" pin="PA3"/>
-<wire x1="144.44" y1="173.3" x2="139" y2="173.3" width="0.1524" layer="91"/>
-<wire x1="139" y1="173.3" x2="139" y2="212.46" width="0.1524" layer="91"/>
 <pinref part="J3" gate="G$1" pin="3"/>
+<wire x1="139" y1="179.3" x2="139" y2="212.46" width="0.1524" layer="91"/>
 <wire x1="205.92" y1="212.46" x2="139" y2="212.46" width="0.1524" layer="91"/>
+<pinref part="NUCLEO_STM32" gate="G$1" pin="PA9"/>
+<wire x1="159.68" y1="142.82" x2="159.68" y2="179.3" width="0.1524" layer="91"/>
+<wire x1="159.68" y1="179.3" x2="139" y2="179.3" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$11" class="0">
@@ -4237,7 +4239,7 @@ Allows current flow when high potential at base.</description>
 <junction x="193.8" y="123"/>
 </segment>
 </net>
-<net name="N$29" class="0">
+<net name="ENTRADASENSOR" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="B$2"/>
 <wire x1="241.76" y1="212.62" x2="231" y2="212.62" width="0.1524" layer="91"/>
@@ -4249,9 +4251,14 @@ Allows current flow when high potential at base.</description>
 <junction x="231" y="198"/>
 <wire x1="231" y1="198" x2="225.08" y2="198" width="0.1524" layer="91"/>
 <wire x1="231" y1="198" x2="231" y2="139" width="0.1524" layer="91"/>
-<wire x1="231" y1="139" x2="164.76" y2="139" width="0.1524" layer="91"/>
-<pinref part="NUCLEO_STM32" gate="G$1" pin="PA8"/>
-<wire x1="164.76" y1="139" x2="164.76" y2="142.82" width="0.1524" layer="91"/>
+<wire x1="231" y1="139" x2="164.8" y2="139" width="0.1524" layer="91"/>
+<wire x1="164.8" y1="139" x2="164.76" y2="139" width="0.1524" layer="91"/>
+<wire x1="164.8" y1="139" x2="164.8" y2="129.3" width="0.1524" layer="91"/>
+<junction x="164.8" y="139"/>
+<wire x1="164.8" y1="129.3" x2="132" y2="129.3" width="0.1524" layer="91"/>
+<wire x1="132" y1="129.3" x2="132" y2="158.06" width="0.1524" layer="91"/>
+<pinref part="NUCLEO_STM32" gate="G$1" pin="PB1"/>
+<wire x1="132" y1="158.06" x2="144.44" y2="158.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -4264,22 +4271,6 @@ Allows current flow when high potential at base.</description>
 <wire x1="101" y1="247.08" x2="101" y2="251.38" width="0.1524" layer="91"/>
 <wire x1="101" y1="251.38" x2="100.56" y2="251.38" width="0.1524" layer="91"/>
 <junction x="100.56" y="251.38"/>
-</segment>
-</net>
-<net name="TX" class="0">
-<segment>
-<pinref part="NUCLEO_STM32" gate="G$1" pin="PB5"/>
-<pinref part="BT_SENSOR" gate="G$1" pin="UART_TX"/>
-<wire x1="197.78" y1="163.14" x2="235.92" y2="163.14" width="0.1524" layer="91"/>
-<wire x1="235.92" y1="163.14" x2="235.92" y2="164.84" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="RX" class="0">
-<segment>
-<pinref part="NUCLEO_STM32" gate="G$1" pin="PB4"/>
-<pinref part="BT_SENSOR" gate="G$1" pin="UART_RX"/>
-<wire x1="197.78" y1="160.6" x2="235.92" y2="160.6" width="0.1524" layer="91"/>
-<wire x1="235.92" y1="160.6" x2="235.92" y2="162.3" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RST" class="0">
@@ -4496,6 +4487,26 @@ Allows current flow when high potential at base.</description>
 <wire x1="171.08" y1="105.22" x2="171.4" y2="105.22" width="0.1524" layer="91"/>
 <pinref part="J4" gate="G$1" pin="4"/>
 <wire x1="171.08" y1="89.22" x2="171.08" y2="105.22" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="BT_SENSOR" gate="G$1" pin="UART_RX"/>
+<wire x1="235.92" y1="162.3" x2="235.92" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="235.92" y1="162.56" x2="200.66" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="162.56" x2="200.66" y2="168.22" width="0.1524" layer="91"/>
+<pinref part="NUCLEO_STM32" gate="G$1" pin="PB7"/>
+<wire x1="200.66" y1="168.22" x2="197.78" y2="168.22" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$21" class="0">
+<segment>
+<pinref part="NUCLEO_STM32" gate="G$1" pin="PB6"/>
+<wire x1="197.78" y1="158.06" x2="228.6" y2="158.06" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="158.06" x2="228.6" y2="165.1" width="0.1524" layer="91"/>
+<pinref part="BT_SENSOR" gate="G$1" pin="UART_TX"/>
+<wire x1="228.6" y1="165.1" x2="235.92" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="235.92" y1="165.1" x2="235.92" y2="164.84" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

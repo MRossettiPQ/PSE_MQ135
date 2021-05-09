@@ -1,0 +1,164 @@
+Netlist
+
+Exported from MQ-135_Matheus_Rossetti_-_14205347.sch at 06/05/2021 18:59
+
+EAGLE Version 9.6.2 Copyright (c) 1988-2020 Autodesk, Inc.
+
+Net           Part         Pad      Pin        Sheet
+
+3,3V          BT_SENSOR    12       +3.3V      1
+              C10          1        1          1
+              C12          1        1          1
+              C7           1        1          1
+              C8           1        1          1
+              C9           2        2          1
+              J4           2        2          1
+              NUCLEO_STM32 1        VDD_1      1
+              NUCLEO_STM32 17       VDD_2      1
+              NUCLEO_STM32 5        VDDA       1
+              Q1           2        E          1
+              R1           2        2          1
+              R3           1        1          1
+
+5V            R5           2        2          1
+              S2           2        2          1
+              U1           VBUS1    VBUS       1
+
+5V-SWT        C11          2        2          1
+              J3           1        1          1
+              R12          2        2          1
+              R3           2        2          1
+              S2           1        1          1
+              U$1          A$1      A$1        1
+              U$1          B$1      B$1        1
+              U$1          H$1      H$1        1
+
+ENTRADASENSOR NUCLEO_STM32 15       PB1        1
+              R2           1        1          1
+              U$1          A$2      A$2        1
+              U$1          B$2      B$2        1
+
+GND           BT_SENSOR    13       GND        1
+              BT_SENSOR    14       GND        1
+              BT_SENSOR    21       GND        1
+              BT_SENSOR    22       GND        1
+              C1           2        2          1
+              C10          2        2          1
+              C11          1        1          1
+              C12          2        2          1
+              C2           2        2          1
+              C3           2        2          1
+              C4           1        1          1
+              C5           2        2          1
+              C6           1        1          1
+              C7           2        2          1
+              C8           2        2          1
+              C9           1        1          1
+              G1           +        +          1
+              J1           1        TEMP1      1
+              J1           3        GND_3      1
+              J3           4        4          1
+              J4           1        1          1
+              LED2         A        A          1
+              LED4         A        A          1
+              NUCLEO_STM32 16       VSS_1      1
+              NUCLEO_STM32 32       VSS_2      1
+              R10          2        2          1
+              R2           2        2          1
+              R6           2        2          1
+              R7           1        1          1
+              R7           2        2          1
+              S1           1        1          1
+              U$1          H$2      H$2        1
+              U1           GND1     GND        1
+
+N$1           NUCLEO_STM32 23       PA13       1
+              R13          2        2          1
+
+N$2           NUCLEO_STM32 11       PA5        1
+              Q1           1        B          1
+
+N$3           NUCLEO_STM32 24       PA14       1
+              R14          2        2          1
+
+N$4           J4           5        5          1
+              R13          1        1          1
+
+N$5           NUCLEO_STM32 26       PB3        1
+              R11          1        1          1
+
+N$6           BT_SENSOR    2        UART_RX    1
+              NUCLEO_STM32 30       PB7        1
+
+N$7           BT_SENSOR    24       LED        1
+              R4           1        1          1
+
+N$8           C1           1        1          1
+              NUCLEO_STM32 3        PA15-OSC32_OUT 1
+              X2           2        2          1
+
+N$9           C6           2        2          1
+              G1           -        -          1
+              J1           5        BAT        1
+
+N$10          C2           1        1          1
+              NUCLEO_STM32 2        PC14-OSC_IN 1
+              X2           1        1          1
+
+N$11          LED2         C        C          1
+              R4           2        2          1
+
+N$13          C5           1        1          1
+              J1           4        VCC4       1
+              J1           8        CE         1
+              LED1         A        A          1
+              LED3         A        A          1
+              R5           1        1          1
+              R6           1        1          1
+
+N$14          J4           4        4          1
+              R14          1        1          1
+
+N$16          J1           2        PROG2      1
+              R10          1        1          1
+
+N$17          LED4         C        C          1
+              R11          2        2          1
+
+N$18          LS4          +        1          1
+              Q1           3        C          1
+
+N$19          C3           1        1          1
+              R1           1        1          1
+
+N$20          LS4          -        2          1
+              R12          1        1          1
+
+N$21          BT_SENSOR    1        UART_TX    1
+              NUCLEO_STM32 29       PB6        1
+
+N$25          J1           6        !STDBY     1
+              R8           2        2          1
+
+N$26          J1           7        !CHRG      1
+              R9           2        2          1
+
+N$27          LED1         C        C          1
+              R9           1        1          1
+
+N$28          LED3         C        C          1
+              R8           1        1          1
+
+RST           C4           2        2          1
+              J4           3        3          1
+              NUCLEO_STM32 4        NRST       1
+              S1           2        2          1
+
+SCL           J3           3        3          1
+              NUCLEO_STM32 9        PA3        1
+
+SDA           J3           2        2          1
+              NUCLEO_STM32 10       PA4        1
+              NUCLEO_STM32 19       PA9        1
+              NUCLEO_STM32 20       PA10       1
+

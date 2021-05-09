@@ -1,0 +1,193 @@
+# NetScript
+# 
+# Exported from MQ-135_Matheus_Rossetti_-_14205347.sch at 06/05/2021 19:01
+# 
+# EAGLE Version 9.6.2 Copyright (c) 1988-2020 Autodesk, Inc.
+# 
+Change Class 0;
+Signal '3,3V'     'BT_SENSOR' '12' \
+                  'C10'      '1' \
+                  'C12'      '1' \
+                  'C7'       '1' \
+                  'C8'       '1' \
+                  'C9'       '2' \
+                  'J4'       '2' \
+                  'NUCLEO_STM32' '1' \
+                  'NUCLEO_STM32' '17' \
+                  'NUCLEO_STM32' '5' \
+                  'Q1'       '2' \
+                  'R1'       '2' \
+                  'R3'       '1' \
+                  ;
+Change Class 0;
+Signal '5V'       'R5'       '2' \
+                  'S2'       '2' \
+                  'U1'       'VBUS1' \
+                  ;
+Change Class 0;
+Signal '5V-SWT'   'C11'      '2' \
+                  'J3'       '1' \
+                  'R12'      '2' \
+                  'R3'       '2' \
+                  'S2'       '1' \
+                  'U$1'      'A$1' \
+                  'U$1'      'B$1' \
+                  'U$1'      'H$1' \
+                  ;
+Change Class 0;
+Signal 'ENTRADASENSOR' 'NUCLEO_STM32' '15' \
+                  'R2'       '1' \
+                  'U$1'      'A$2' \
+                  'U$1'      'B$2' \
+                  ;
+Change Class 0;
+Signal 'GND'      'BT_SENSOR' '13' \
+                  'BT_SENSOR' '14' \
+                  'BT_SENSOR' '21' \
+                  'BT_SENSOR' '22' \
+                  'C1'       '2' \
+                  'C10'      '2' \
+                  'C11'      '1' \
+                  'C12'      '2' \
+                  'C2'       '2' \
+                  'C3'       '2' \
+                  'C4'       '1' \
+                  'C5'       '2' \
+                  'C6'       '1' \
+                  'C7'       '2' \
+                  'C8'       '2' \
+                  'C9'       '1' \
+                  'G1'       '+' \
+                  'J1'       '1' \
+                  'J1'       '3' \
+                  'J3'       '4' \
+                  'J4'       '1' \
+                  'LED2'     'A' \
+                  'LED4'     'A' \
+                  'NUCLEO_STM32' '16' \
+                  'NUCLEO_STM32' '32' \
+                  'R10'      '2' \
+                  'R2'       '2' \
+                  'R6'       '2' \
+                  'R7'       '1' \
+                  'R7'       '2' \
+                  'S1'       '1' \
+                  'U$1'      'H$2' \
+                  'U1'       'GND1' \
+                  ;
+Change Class 0;
+Signal 'N$1'      'NUCLEO_STM32' '23' \
+                  'R13'      '2' \
+                  ;
+Change Class 0;
+Signal 'N$2'      'NUCLEO_STM32' '11' \
+                  'Q1'       '1' \
+                  ;
+Change Class 0;
+Signal 'N$3'      'NUCLEO_STM32' '24' \
+                  'R14'      '2' \
+                  ;
+Change Class 0;
+Signal 'N$4'      'J4'       '5' \
+                  'R13'      '1' \
+                  ;
+Change Class 0;
+Signal 'N$5'      'NUCLEO_STM32' '26' \
+                  'R11'      '1' \
+                  ;
+Change Class 0;
+Signal 'N$6'      'BT_SENSOR' '2' \
+                  'NUCLEO_STM32' '30' \
+                  ;
+Change Class 0;
+Signal 'N$7'      'BT_SENSOR' '24' \
+                  'R4'       '1' \
+                  ;
+Change Class 0;
+Signal 'N$8'      'C1'       '1' \
+                  'NUCLEO_STM32' '3' \
+                  'X2'       '2' \
+                  ;
+Change Class 0;
+Signal 'N$9'      'C6'       '2' \
+                  'G1'       '-' \
+                  'J1'       '5' \
+                  ;
+Change Class 0;
+Signal 'N$10'     'C2'       '1' \
+                  'NUCLEO_STM32' '2' \
+                  'X2'       '1' \
+                  ;
+Change Class 0;
+Signal 'N$11'     'LED2'     'C' \
+                  'R4'       '2' \
+                  ;
+Change Class 0;
+Signal 'N$13'     'C5'       '1' \
+                  'J1'       '4' \
+                  'J1'       '8' \
+                  'LED1'     'A' \
+                  'LED3'     'A' \
+                  'R5'       '1' \
+                  'R6'       '1' \
+                  ;
+Change Class 0;
+Signal 'N$14'     'J4'       '4' \
+                  'R14'      '1' \
+                  ;
+Change Class 0;
+Signal 'N$16'     'J1'       '2' \
+                  'R10'      '1' \
+                  ;
+Change Class 0;
+Signal 'N$17'     'LED4'     'C' \
+                  'R11'      '2' \
+                  ;
+Change Class 0;
+Signal 'N$18'     'LS4'      '+' \
+                  'Q1'       '3' \
+                  ;
+Change Class 0;
+Signal 'N$19'     'C3'       '1' \
+                  'R1'       '1' \
+                  ;
+Change Class 0;
+Signal 'N$20'     'LS4'      '-' \
+                  'R12'      '1' \
+                  ;
+Change Class 0;
+Signal 'N$21'     'BT_SENSOR' '1' \
+                  'NUCLEO_STM32' '29' \
+                  ;
+Change Class 0;
+Signal 'N$25'     'J1'       '6' \
+                  'R8'       '2' \
+                  ;
+Change Class 0;
+Signal 'N$26'     'J1'       '7' \
+                  'R9'       '2' \
+                  ;
+Change Class 0;
+Signal 'N$27'     'LED1'     'C' \
+                  'R9'       '1' \
+                  ;
+Change Class 0;
+Signal 'N$28'     'LED3'     'C' \
+                  'R8'       '1' \
+                  ;
+Change Class 0;
+Signal 'RST'      'C4'       '2' \
+                  'J4'       '3' \
+                  'NUCLEO_STM32' '4' \
+                  'S1'       '2' \
+                  ;
+Change Class 0;
+Signal 'SCL'      'J3'       '3' \
+                  'NUCLEO_STM32' '19' \
+                  'NUCLEO_STM32' '9' \
+                  ;
+Change Class 0;
+Signal 'SDA'      'J3'       '2' \
+                  'NUCLEO_STM32' '10' \
+                  'NUCLEO_STM32' '20' \
+                  ;
