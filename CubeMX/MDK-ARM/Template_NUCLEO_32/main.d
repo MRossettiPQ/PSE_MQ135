@@ -41,4 +41,5 @@ template_nucleo_32\main.o: ..\Drivers\Oled_Driver\ssd1306.h
 template_nucleo_32\main.o: ..\Drivers\Oled_Driver\fonts.h
 template_nucleo_32\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 template_nucleo_32\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+template_nucleo_32\main.o: ../Core/Inc/hal_uart.h
 template_nucleo_32\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

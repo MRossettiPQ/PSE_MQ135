@@ -7,7 +7,9 @@
 #define _HAL_UART_HEADER_SENTRY_
 
 #include "main.h"
-
+#define BUFFER_LEN  1
+uint8_t RX_BUFFER[BUFFER_LEN] = {0};
+uint8_t TX_BUFFER[BUFFER_LEN] = {0};
 // Prototipe das funções exportadas.
 
 void hal_uart_init(void);

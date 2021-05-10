@@ -20,10 +20,10 @@
 /* Private includes ----------------------------------------------------------*/
 #include "ssd1306.h" 
 #include "hal_timer.h"
+#include "hal_uart.h"
 #include <stdio.h>
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
-#define BUFFER_LEN  50
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
 ADC_HandleTypeDef hadc;
@@ -32,8 +32,7 @@ TIM_HandleTypeDef htim2;
 UART_HandleTypeDef huart2;
 
 uint16_t AD_RES = 0;
-uint8_t RX_BUFFER[BUFFER_LEN] = {0};
-uint8_t TX_BUFFER[BUFFER_LEN] = {0};
+
 
 
 /* Private function prototypes -----------------------------------------------*/
@@ -51,7 +50,7 @@ static void MX_I2C1_Init(void);
 int main(void)
 {
 	extern  I2C_HandleTypeDef  hi2c1;
-	char buffer[40];
+	unsigned char buffer;
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
@@ -74,7 +73,6 @@ int main(void)
 	//Calibrate The ADC On Power-Up For Better Accuracy
   HAL_ADCEx_Calibration_Start(&hadc, 10);
    
-	HAL_UART_Receive_IT(&huart2, RX_BUFFER, BUFFER_LEN);
   /* Infinite loop */
   while (1)
   {
@@ -83,10 +81,8 @@ int main(void)
     AD_RES = HAL_ADC_GetValue (&hadc);
     HAL_ADC_Stop (&hadc);
 		
-		
-		sprintf(buffer, "\nNivel de CO2 Ausente ou Baixo - Valor: %uint16_t", AD_RES);
-		TX_BUFFER[0] = AD_RES>>4;
-    HAL_UART_Transmit(&huart2, TX_BUFFER, sizeof(TX_BUFFER), 100);
+		hal_uart_write(AD_RES);
+
     HAL_Delay(25);
   }
 }
@@ -306,21 +302,7 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(LD3_GPIO_Port, &GPIO_InitStruct);
 
 }
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
-{
-    if(huart->Instance == huart2.Instance)
-    {
-			if(RX_BUFFER[0] == '1')
-			{
-					HAL_GPIO_WritePin(BLE_RX_GPIO_Port, BLE_RX_Pin, GPIO_PIN_SET);
-			}
-			else if(RX_BUFFER[0] == '0')
-			{
-					HAL_GPIO_WritePin(BLE_TX_GPIO_Port, BLE_RX_Pin, GPIO_PIN_RESET);
-			}
-			HAL_UART_Receive_IT(&huart2, RX_BUFFER, BUFFER_LEN);
-    }
-}
+
 /**
   * @brief  This function is executed in case of error occurrence.
   * @retval None
