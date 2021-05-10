@@ -68,7 +68,6 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART2_UART_Init();
-  MX_TIM2_Init();
   MX_ADC_Init();
   MX_I2C1_Init();
 	SSD1306_Init();  													//Inicializa o display
